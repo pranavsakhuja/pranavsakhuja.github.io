@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume / CV | Pranav Sakhuja</title>
+
+  <style>
+    :root {
+      --bg: #f6f6f3;
+      --surface: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --line: #e7e7e2;
+      --radius: 20px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 0.9rem;
+      background: #fff;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #f1f1ed;
+      transform: translateY(-1px);
+    }
+
+    .page {
+      padding: 2rem 0 3rem;
+    }
+
+    .page-title {
+      margin-bottom: 1rem;
+    }
+
+    .page-title h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .page-title p {
+      color: var(--muted);
+    }
+
+    .pdf-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .pdf-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .pdf-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+
+    .pdf-header h2 {
+      font-size: 1.1rem;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 90vh;
+      border: none;
+      display: block;
+      background: #fff;
+    }
+
+    @media (max-width: 700px) {
+      .pdf-frame {
+        height: 75vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div><b>Pranav Sakhuja</b></div>
+      <a href="index.html" class="btn">← Back</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <div class="page-title">
+        <h1>Resume / CV</h1>
+      </div>
+
+      <div class="pdf-grid">
+        <section class="pdf-card">
+          <div class="pdf-header">
+            <h2>Resume</h2>
+            <a href="Pranav_Sakhuja_Resume.pdf" class="btn" target="_blank">Open</a>
+          </div>
+          <iframe
+            class="pdf-frame"
+            src="Pranav_Sakhuja_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0">
+          </iframe>
+        </section>
+
+        <section class="pdf-card">
+          <div class="pdf-header">
+            <h2>Curriculum Vitae</h2>
+            <a href="Pranav_Sakhuja_Curriculum_Vitae.pdf" class="btn" target="_blank">Open</a>
+          </div>
+          <iframe
+            class="pdf-frame"
+            src="Pranav_Sakhuja_Curriculum_Vitae.pdf#toolbar=0&navpanes=0&scrollbar=0">
+          </iframe>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
